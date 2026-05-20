@@ -5,3 +5,15 @@ def home(request):
 
 def main(request):
     return render(request, 'main.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def projects(request):
+    return render(request, 'projects.html')
+
+def github(request):
+    return render(request, 'github.html')
