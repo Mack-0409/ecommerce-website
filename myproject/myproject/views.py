@@ -10,3 +10,8 @@ def about(request):
     return render(request, 'about.html')
 
 
+def login_(request):
+    return render(request,  'login.html')
+
+def logout(request):
+    return render(request,  'logout.html')
