@@ -1317,19 +1317,3 @@ a {
   justify-content: center;
 }
 
-/* Base Sky Layer */
-.uiverse-midnight-sky .sky-canvas {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-  background: #050505;
-}
-
-/* Generic star layer style */
-.uiverse-midnight-sky .stars {
-  position: absolute;
-  inset: 0;
-  background-repeat: repeat;
-  pointer-events: none;
-
