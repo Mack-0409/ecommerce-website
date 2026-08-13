@@ -1,0 +1,149 @@
+Recommended Django E-commerce Folder Structure
+ecommerce/
+│
+├── manage.py
+│
+├── ecommerce/                 # Main project configuration
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── accounts/                  # User registration, login, profile
+│   ├── migrations/
+│   ├── templates/
+│   │   └── accounts/
+│   │       ├── login.html
+│   │       ├── register.html
+│   │       └── profile.html
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── urls.py
+│   ├── views.py
+│   └── __init__.py
+│
+├── products/                  # Products and categories
+│   ├── migrations/
+│   ├── templates/
+│   │   └── products/
+│   │       ├── product_list.html
+│   │       ├── product_detail.html
+│   │       └── category.html
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── urls.py
+│   ├── views.py
+│   └── __init__.py
+│
+├── cart/                      # Shopping cart
+│   ├── migrations/
+│   ├── templates/
+│   │   └── cart/
+│   │       └── cart.html
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── urls.py
+│   ├── views.py
+│   └── __init__.py
+│
+├── orders/                    # Orders and checkout
+│   ├── migrations/
+│   ├── templates/
+│   │   └── orders/
+│   │       ├── checkout.html
+│   │       ├── order_detail.html
+│   │       └── order_success.html
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── urls.py
+│   ├── views.py
+│   └── __init__.py
+│
+├── payments/                  # Payment processing
+│   ├── migrations/
+│   ├── apps.py
+│   ├── models.py
+│   ├── urls.py
+│   ├── views.py
+│   └── __init__.py
+│
+├── templates/                 # Common templates
+│   ├── base.html
+│   ├── home.html
+│   ├── navbar.html
+│   └── footer.html
+│
+├── static/                    # CSS, JavaScript, images
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   └── images/
+│
+├── media/                     # Uploaded product images
+│   └── products/
+│
+├── requirements.txt
+├── .env
+├── .gitignore
+└── README.md
+What each app does
+App	Purpose
+accounts	Register, login, logout, user profiles
+products	Products, categories, search, product details
+cart	Add/remove/update products in cart
+orders	Checkout, addresses, order history
+payments	Online payment integration
+ecommerce	Main Django settings and URL configuration
+Example database models
+
+Your main models could look something like:
+
+User
+ │
+ └── Profile
+
+
+Category
+ │
+ └── Product
+       │
+       └── ProductImage
+
+
+Cart
+ │
+ └── CartItem
+       │
+       └── Product
+
+
+Order
+ │
+ ├── OrderItem
+ ├── ShippingAddress
+ └── Payment
+URL structure
+
+A clean URL structure would be:
+
+/                       → Home
+/products/              → All products
+/products/10/           → Product details
+/category/shoes/        → Category
+/cart/                  → Shopping cart
+/checkout/              → Checkout
+/orders/                → My orders
+/orders/10/             → Order details
+/accounts/login/        → Login
+/accounts/register/     → Register
+/accounts/profile/      → Profile
+/payment/               → Payment
