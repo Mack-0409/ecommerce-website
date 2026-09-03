@@ -1,1 +1,38 @@
-A README file contains descriptive information about the content of a directory in which the file is located. The scope of the information generally includes the files of the directory, and may include descendant directories, or even the full directory tree. The name is intended to draw a user's attention to important and orientational information about the directory content. A rule of thumb for one unfamiliar with the content of a directory is to read the README file before other files. Although the name README is often used, there are many other similar names used for the same purpose including "Read Me" and "READ.ME". Sometimes the file name includes an extension to indicate the file format such as "README.txt" for plain text or "README.md" for Markdown.[1] The file's name is often all caps.
+.navbar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.search-form {
+    max-width: 400px;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.navbar .nav-link:hover {
+    color: #f8f9fa !important;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+@media (max-width: 767.98px) {
+    .search-form {
+        max-width: 100%;
+    }
+}
